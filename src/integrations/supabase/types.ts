@@ -14,7 +14,151 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      backup_logs: {
+        Row: {
+          backup_latency_seconds: number | null
+          backup_size_mb: number | null
+          created_at: string
+          device_id: string
+          error_message: string | null
+          id: string
+          risk_score_at_backup: number | null
+          success: boolean
+          user_id: string
+        }
+        Insert: {
+          backup_latency_seconds?: number | null
+          backup_size_mb?: number | null
+          created_at?: string
+          device_id: string
+          error_message?: string | null
+          id?: string
+          risk_score_at_backup?: number | null
+          success?: boolean
+          user_id: string
+        }
+        Update: {
+          backup_latency_seconds?: number | null
+          backup_size_mb?: number | null
+          created_at?: string
+          device_id?: string
+          error_message?: string | null
+          id?: string
+          risk_score_at_backup?: number | null
+          success?: boolean
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "backup_logs_device_id_fkey"
+            columns: ["device_id"]
+            isOneToOne: false
+            referencedRelation: "devices"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      devices: {
+        Row: {
+          created_at: string
+          current_risk_level: number | null
+          device_id: string
+          device_model: string | null
+          device_name: string
+          id: string
+          last_backup_at: string | null
+          status: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          current_risk_level?: number | null
+          device_id: string
+          device_model?: string | null
+          device_name: string
+          id?: string
+          last_backup_at?: string | null
+          status?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          current_risk_level?: number | null
+          device_id?: string
+          device_model?: string | null
+          device_name?: string
+          id?: string
+          last_backup_at?: string | null
+          status?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          full_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      risk_events: {
+        Row: {
+          backup_triggered: boolean | null
+          created_at: string
+          device_id: string
+          event_type: string
+          id: string
+          risk_score: number
+          sensor_data: Json | null
+          user_id: string
+        }
+        Insert: {
+          backup_triggered?: boolean | null
+          created_at?: string
+          device_id: string
+          event_type: string
+          id?: string
+          risk_score: number
+          sensor_data?: Json | null
+          user_id: string
+        }
+        Update: {
+          backup_triggered?: boolean | null
+          created_at?: string
+          device_id?: string
+          event_type?: string
+          id?: string
+          risk_score?: number
+          sensor_data?: Json | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "risk_events_device_id_fkey"
+            columns: ["device_id"]
+            isOneToOne: false
+            referencedRelation: "devices"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
