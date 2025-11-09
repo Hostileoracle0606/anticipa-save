@@ -26,8 +26,8 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm">Sign In</Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">Get Started</Button>
+            <Button variant="ghost" size="sm" onClick={() => window.location.href = "/auth"}>Sign In</Button>
+            <Button size="sm" className="bg-primary hover:bg-primary/90" onClick={() => window.location.href = "/auth"}>Get Started</Button>
           </div>
         </div>
       </div>

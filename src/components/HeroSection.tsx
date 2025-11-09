@@ -39,13 +39,13 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold px-8 h-14 text-lg group">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold px-8 h-14 text-lg group" onClick={() => window.location.href = "/auth"}>
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg group">
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg group" onClick={() => window.location.href = "/dashboard"}>
               <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Watch Demo
+              View Dashboard
             </Button>
           </div>
 
