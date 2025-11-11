@@ -71,3 +71,13 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Sentinel Cloud Android App
+
+The repository now contains an Android client under `android-app/` that delivers the predictive risk detection and automated backup workflow. Open the folder in Android Studio to explore the Kotlin + Jetpack Compose implementation. See `android-app/README.md` for setup instructions, Firebase configuration, and guidance on supplying the TensorFlow Lite risk model.
+
+## Sentinel Cloud Web + Backend Scaffolds
+
+- `frontend/` – Vite + React + Tailwind minimal UI that surfaces only the system state, backup progress, data selectors, and vault summaries. Run `npm install && npm run dev` and it will proxy API calls to `http://localhost:8000`.
+- `backend/` – FastAPI service that simulates TensorFlow Lite risk inference, backup orchestration, and vault metadata. Create a virtualenv, install with `pip install -e .[dev]`, and start it using `uvicorn app.main:app --reload`.
+- Both layers communicate via succinct JSON contracts; the frontend never receives raw sensor data, only the interpreted summaries required for trust and awareness.

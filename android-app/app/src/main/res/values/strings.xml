@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sentinel Cloud</string>
+    <string name="risk_detection_title">Predictive Risk Detection</string>
+    <string name="risk_detection_description">Monitoring motion, temperature, and battery health to predict potential device failure.</string>
+    <string name="backup_manager_title">Secure Backup Manager</string>
+    <string name="backup_manager_description">Encrypting and syncing your data to Sentinel Cloud before damage happens.</string>
+    <string name="cta_enable_protection">Enable Protection</string>
+</resources>
+
+

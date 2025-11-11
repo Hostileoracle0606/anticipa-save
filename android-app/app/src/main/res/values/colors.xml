@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="seed">#3F51B5</color>
+    <color name="md_theme_light_primary">#2E4AC5</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_dark_primary">#9FAFFB</color>
+    <color name="md_theme_dark_onPrimary">#0E1A69</color>
+</resources>
+
+
