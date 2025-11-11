@@ -33,3 +33,8 @@ backend/__pycache__/
 
 # Android app secrets
 android-app/app/google-services.json
+android-app/.gradle/
+android-app/app/build/
+android-app/build/
+android-app/gradle-8.7-bin/
+android-app/gradle-8.7-bin.zip
